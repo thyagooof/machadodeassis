@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #6a3e23;
+    --secondary-color: #fdfaf3;
+    --text-color: #333;
+    --light-text-color: #fff;
+    --font-main: 'Roboto', sans-serif;
+    --font-headings: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 80px 0;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+nav a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.header-content .header-text {
+    flex-basis: 60%;
+}
+
+.header-logo {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-image {
+    width: 180px;
+    height: 180px;
+    background-color: #fdfaf3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-title {
+    font-family: var(--font-headings);
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.main-heading {
+    font-family: var(--font-headings);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.quote {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-left: 4px solid var(--light-text-color);
+    font-style: italic;
+}
+
+.quote p {
+    margin-bottom: 10px;
+}
+
+.quote footer {
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+}
+
+main section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-headings);
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--primary-color);
+}
+
+/* Biography Timeline */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    text-align: left;
+    padding-left: 70px;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: auto;
+    left: 11px;
+    background-color: var(--secondary-color);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-year {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* Works Section */
+.works-intro {
+    max-width: 800px;
+    margin: -20px auto 60px;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.work-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* === CÓDIGO ALTERADO ABAIXO === */
+
+.work-card-image {
+    background-color: var(--primary-color);
+    padding: 20px; /* Reduzi o padding para dar mais espaço à imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px; /* Altura fixa para todos os contêineres de imagem */
+}
+
+.work-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta a imagem para caber sem distorcer */
+}
+
+/* === FIM DO CÓDIGO ALTERADO === */
+
+.book-cover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    width: 120px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.book-cover span {
+    display: block;
+}
+
+.book-cover .author {
+    font-size: 0.8rem;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.work-card-content {
+    padding: 20px;
+}
+
+.work-card h3 {
+    font-family: var(--font-headings);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.work-card .year {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Themes Section */
+.themes-intro {
+     max-width: 800px;
+     margin: -20px auto 60px;
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.theme-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.theme-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.theme-card h3 {
+    font-family: var(--font-headings);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Impact Section */
+#impact {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+#impact .section-title {
+    color: var(--light-text-color);
+}
+
+.impact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.impact-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Test Section */
+#test {
+    padding-bottom: 100px;
+}
+
+/* Adicionando os ícones como texto para simplicidade */
+.theme-icon::before {
+     font-family: 'Arial', sans-serif;
+     font-weight: bold;
+}
+
+.icon-irony::before { content: '⚡'; }
+.icon-psychology::before { content: '💡'; }
+.icon-social::before { content: '👥'; }
+.icon-metalanguage::before { content: '📖'; }
